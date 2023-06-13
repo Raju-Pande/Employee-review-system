@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 
 // here we connect the odm(object document maper) mongoose to the dbms mongodb.
  
-mongoose.connect("mongodb://127.0.0.1:27017/RAJ-EMP",{
+mongoose.connect(process.env.MONGO_URL,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 
 
 

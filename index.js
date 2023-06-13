@@ -1,12 +1,9 @@
-
+require('dotenv').config()
 const express = require('express');
 const cookieParser = require('cookie-parser'); // parse cookie header and populate req.cookies
 const bodyParser = require('body-parser'); // parses incoming request bodies (req.body)
-const dotEnv = require('dotenv');
-dotEnv.config();
 const app = express();
 const db = require('./config/database');
-const { PORT, MONGODB_URL, SESSION_SECRET_KEY } = process.env;
 const expressLayouts = require('express-ejs-layouts');
 
 // used for session cookie
